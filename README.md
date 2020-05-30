@@ -1,14 +1,14 @@
 # ACF Dimensions 
 
-**Contributors:** rabmalin
-**Donate link:** https://github.com/ernilambar/acf-dimensions
-**Tags:** acf, dimension, field,
-**Requires at least:** 5.0
-**Requires PHP:** 5.6.20
-**Tested up to:** 5.4
-**Stable tag:** 1.0.0
-**License:** GPLv2 or later
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+**Contributors:** rabmalin  
+**Donate link:** https://github.com/ernilambar/acf-dimensions  
+**Tags:** acf, dimension, field,  
+**Requires at least:** 5.0  
+**Requires PHP:** 5.6.20  
+**Tested up to:** 5.4  
+**Stable tag:** 1.0.0  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
 An ACF field for dimension.
 
