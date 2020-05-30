@@ -16,6 +16,8 @@ An ACF field for dimension.
 
 ACF Dimensions is an extension of ACF plugin. It provides dimension field to enter CSS values like margin or padding. It also support device switcher.
 
+![Dimensions Field Example](https://github.com/ernilambar/acf-dimensions/blob/master/plugin-assets/screenshot-1.png)
+
 == Installation ==
 
 = Using The WordPress Dashboard =
