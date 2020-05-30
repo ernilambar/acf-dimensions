@@ -1,0 +1,23 @@
+{
+  "name": "acf-dimensions",
+  "title": "ACF Dimensions",
+  "version": "1.0.0",
+  "license": "GPL-2.0+",
+  "main_file": "acf-dimensions.php",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "repository": "github:ernilambar/acf-dimensions",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-run": "^1.7.1",
+    "gulp-zip": "^5.0.1",
+    "node-wp-i18n": "^1.2.3"
+  }
+}

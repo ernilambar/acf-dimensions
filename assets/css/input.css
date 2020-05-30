@@ -1,0 +1,119 @@
+.acf-dimensions a {
+	text-decoration: none;
+}
+
+.acf-dimensions input,
+.acf-dimensions select {
+	border-radius: 0;
+}
+
+.acf-dimensions .btn {
+	padding: 0;
+	padding: 5px !important;
+	border: none;
+}
+
+.acf-dimensions .btn--active {
+	background-color: #0073aa;
+	color: #FFF;
+}
+.acf-dimensions .btn--linker.btn--active {
+	background-color: #0073aa;
+	color: #FFF;
+}
+
+.acf-dimensions__buttons ul {
+	display: flex;
+	margin-bottom: 10px;
+	list-style-type: none !important;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.acf-dimensions__buttons ul li {
+	margin-right: 3px;
+}
+
+.acf-dimensions__buttons ul li a {
+	text-decoration: none;
+}
+
+.acf-dimensions__inputs {
+	display: flex;
+	align-items: center;
+}
+
+.acf-dimensions__device {
+	display: none;
+}
+
+.acf-dimensions__device.acf-dimensions__device--active {
+	display: flex;
+}
+
+.acf-dimensions__texts {
+	display: flex;
+}
+
+.acf-dimensions__texts input[type="text"] {
+	max-width: 70px;
+	border-right-width: 0;
+}
+
+.acf-dimensions__texts .input-left {
+	border-right-width: 1px !important;
+}
+
+.acf-dimensions__inputs {
+	display: flex;
+	margin-right: 15px;
+}
+
+.acf-dimensions__unit {
+	min-width: 50px;
+}
+
+.acf-dimensions .btn--linker {
+	background-color: #7e8993;
+	color: #fff;
+}
+
+.acf-dimensions .btn--linker .linked,
+.acf-dimensions .btn--linker.btn--active .unlinked  {
+	display: none;
+}
+
+.acf-dimensions .btn--linker .unlinked,
+.acf-dimensions .btn--linker.btn--active .linked {
+	display: inline-block;
+}
+
+/** Sidebar **/
+.edit-post-sidebar .acf-dimensions__device.acf-dimensions__device--active {
+	display: inline-block;
+}
+
+.edit-post-sidebar .acf-dimensions__unit {
+	margin-top: 10px;
+	max-width: 60px;
+}
+
+.edit-post-sidebar .acf-dimensions input,
+.edit-post-sidebar .acf-dimensions select {
+	border-radius: 0;
+}
+
+/** Editor **/
+.block-editor__typewriter .acf-dimensions input,
+.block-editor__typewriter .acf-dimensions select {
+	border-radius: 0;
+}
+
+.block-editor__typewriter .acf-dimensions__buttons ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.block-editor__typewriter .acf-dimensions__buttons span {
+	padding-right: 25px;
+}
