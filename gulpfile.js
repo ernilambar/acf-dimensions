@@ -25,7 +25,7 @@ var deploy_files_list = [
 	'assets/**',
 	'fields/**',
 	'languages/**',
-	'readme.txt',
+	'README.md',
 	pkg.main_file
 ];
 
