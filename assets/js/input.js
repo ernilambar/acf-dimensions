@@ -14,7 +14,7 @@
 		$('.input-top', $field ).on('keyup',function(e){
 			var $this = $(this);
 
-			var $is_linked = $this.parent().parent().find('.btn--linker').hasClass('btn--active');
+			var $is_linked = $this.parent().parent().parent().find('.btn--linker').hasClass('btn--active');
 
 			if ( true == $is_linked ) {
 				handleTopChange($this);
@@ -44,7 +44,7 @@
 		function handleTopChange($this) {
 			var $value_top = $this.val();
 
-			$this.parent().find('input:not(.input-linked)').val( $value_top );
+			$this.parent().parent().find('input:not(.input-linked)').val( $value_top );
 		}
 
 		function copyLinkedValue( $this ) {
