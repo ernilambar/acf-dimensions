@@ -123,89 +123,101 @@ if ( ! class_exists( 'NS_ACF_Field_Dimensions' ) ) :
 
 				<div class="acf-dimensions__devices">
 
-						<?php $cnt = 1; ?>
-						<?php foreach ( $devices as $item ) : ?>
+					<?php $cnt = 1; ?>
+					<?php foreach ( $devices as $item ) : ?>
 
+						<?php
+						$device_classes = 'acf-dimensions__device--' . $item;
+
+						if ( 1 === $cnt ) {
+							$device_classes .= ' acf-dimensions__device--active';
+						}
+						?>
+
+						<div class="acf-dimensions__device <?php echo esc_attr( $device_classes ); ?>">
 							<?php
-							$device_classes = 'acf-dimensions__device--' . $item;
+							// Values.
+							$value_top    = isset( $field['value'][ $item ]['top'] ) ? $field['value'][ $item ]['top'] : '';
+							$value_right  = isset( $field['value'][ $item ]['right'] ) ? $field['value'][ $item ]['right'] : '';
+							$value_bottom = isset( $field['value'][ $item ]['bottom'] ) ? $field['value'][ $item ]['bottom'] : '';
+							$value_left   = isset( $field['value'][ $item ]['left'] ) ? $field['value'][ $item ]['left'] : '';
 
-							if ( 1 === $cnt ) {
-								$device_classes .= ' acf-dimensions__device--active';
+							// Linked status.
+							$is_linked = ( isset( $field['value'][ $item ]['linked'] ) && 1 !== absint( $field['value'][ $item ]['linked'] ) ) ? 0 : 1;
+
+							if ( 1 === $is_linked ) {
+								$value_right  = $value_top;
+								$value_bottom = $value_top;
+								$value_left   = $value_top;
 							}
 							?>
 
-							<div class="acf-dimensions__device <?php echo esc_attr( $device_classes ); ?>">
-								<?php
-								// Values.
-								$value_top    = isset( $field['value'][ $item ]['top'] ) ? $field['value'][ $item ]['top'] : '';
-								$value_right  = isset( $field['value'][ $item ]['right'] ) ? $field['value'][ $item ]['right'] : '';
-								$value_bottom = isset( $field['value'][ $item ]['bottom'] ) ? $field['value'][ $item ]['bottom'] : '';
-								$value_left   = isset( $field['value'][ $item ]['left'] ) ? $field['value'][ $item ]['left'] : '';
-
-								// Linked status.
-								$is_linked = ( isset( $field['value'][ $item ]['linked'] ) && 1 !== absint( $field['value'][ $item ]['linked'] ) ) ? 0 : 1;
-
-								if ( 1 === $is_linked ) {
-									$value_right  = $value_top;
-									$value_bottom = $value_top;
-									$value_left   = $value_top;
-								}
-								?>
-
-								<div class="acf-dimensions__inputs">
-									<div class="acf-dimensions__texts">
+							<div class="acf-dimensions__inputs">
+								<div class="acf-dimensions__texts">
+									<div class="acf-dimensions__input">
 										<input type="text"
 											class="input-top"
 											name="<?php echo esc_attr( $field['name'] ); ?>[<?php echo esc_attr( $item ); ?>][top]"
 											value="<?php echo esc_attr( $value_top ); ?>"
-											placeholder="<?php echo esc_attr__( 'Top', 'acf-dimensions' ); ?>" />
+											/>
+										<span class="input-label"><?php esc_html_e( 'Top', 'acf-dimensions' ); ?></span>
+									</div><!-- .acf-dimensions__input -->
+									<div class="acf-dimensions__input">
 										<input type="text"
 											class="input-right"
 											name="<?php echo esc_attr( $field['name'] ); ?>[<?php echo esc_attr( $item ); ?>][right]"
 											value="<?php echo esc_attr( $value_right ); ?>"
 											<?php echo $is_linked ? ' readonly ' : ''; ?>
-											placeholder="<?php echo esc_attr__( 'Right', 'acf-dimensions' ); ?>" />
+											/>
+											<span class="input-label"><?php esc_html_e( 'Right', 'acf-dimensions' ); ?></span>
+									</div>
+									<div class="acf-dimensions__input">
 										<input type="text"
 											class="input-bottom"
 											name="<?php echo esc_attr( $field['name'] ); ?>[<?php echo esc_attr( $item ); ?>][bottom]"
 											value="<?php echo esc_attr( $value_bottom ); ?>"
 											<?php echo $is_linked ? ' readonly ' : ''; ?>
-											placeholder="<?php echo esc_attr__( 'Bottom', 'acf-dimensions' ); ?>" />
+											/>
+										<span class="input-label"><?php esc_html_e( 'Bottom', 'acf-dimensions' ); ?></span>
+									</div>
+									<div class="acf-dimensions__input">
 										<input type="text"
 											class="input-left"
 											name="<?php echo esc_attr( $field['name'] ); ?>[<?php echo esc_attr( $item ); ?>][left]"
 											value="<?php echo esc_attr( $value_left ); ?>"
 											<?php echo $is_linked ? ' readonly ' : ''; ?>
-											placeholder="<?php echo esc_attr__( 'Left', 'acf-dimensions' ); ?>" />
-									</div><!-- .acf-dimensions__texts -->
-									<div class="acf-dimensions__linker">
-										<?php
-										$button_classes = '';
-
-										if ( 1 === $is_linked ) {
-											$button_classes .= ' btn--active';
-										}
-										?>
-										<button class="btn btn--linker <?php echo esc_attr( $button_classes ); ?>">
-											<span class="linked dashicons dashicons-admin-links"></span>
-											<span class="unlinked dashicons dashicons-editor-unlink"></span>
-										</button>
-
-										<input type="hidden" class="input-linked" name="<?php echo esc_attr( $field['name'] ); ?>[<?php echo esc_attr( $item ); ?>][linked]" value="<?php echo esc_attr( $is_linked ); ?>" />
-									</div><!-- .acf-dimensions__linker -->
-								</div>
-								<div class="acf-dimensions__unit">
+											/>
+										<span class="input-label"><?php esc_html_e( 'Left', 'acf-dimensions' ); ?></span>
+									</div>
+								</div><!-- .acf-dimensions__texts -->
+								<div class="acf-dimensions__linker">
 									<?php
-									$selected_desktop_unit = ( isset( $field['value'][ $item ]['unit'] ) ) ? $field['value'][ $item ]['unit'] : '';
+									$button_classes = '';
+
+									if ( 1 === $is_linked ) {
+										$button_classes .= ' btn--active';
+									}
 									?>
-									<select name="<?php echo esc_attr( $field['name'] ); ?>[<?php echo esc_attr( $item ); ?>][unit]">
-										<?php foreach ( $this->units as $item ) : ?>
-											<option value="<?php echo esc_attr( $item ); ?>" <?php selected( $item, $selected_desktop_unit ); ?>><?php echo esc_html( $item ); ?></option>
-										<?php endforeach; ?>
-									</select>
-								</div><!-- .acf-dimensions__unit -->
+									<button class="btn btn--linker <?php echo esc_attr( $button_classes ); ?>">
+										<span class="linked dashicons dashicons-admin-links"></span>
+										<span class="unlinked dashicons dashicons-editor-unlink"></span>
+									</button>
+
+									<input type="hidden" class="input-linked" name="<?php echo esc_attr( $field['name'] ); ?>[<?php echo esc_attr( $item ); ?>][linked]" value="<?php echo esc_attr( $is_linked ); ?>" />
+								</div><!-- .acf-dimensions__linker -->
 							</div>
-							<?php $cnt++; ?>
+							<div class="acf-dimensions__unit">
+								<?php
+								$selected_desktop_unit = ( isset( $field['value'][ $item ]['unit'] ) ) ? $field['value'][ $item ]['unit'] : '';
+								?>
+								<select name="<?php echo esc_attr( $field['name'] ); ?>[<?php echo esc_attr( $item ); ?>][unit]">
+									<?php foreach ( $this->units as $item ) : ?>
+										<option value="<?php echo esc_attr( $item ); ?>" <?php selected( $item, $selected_desktop_unit ); ?>><?php echo esc_html( $item ); ?></option>
+									<?php endforeach; ?>
+								</select>
+							</div><!-- .acf-dimensions__unit -->
+						</div>
+						<?php $cnt++; ?>
 					<?php endforeach; ?>
 
 				</div><!-- .acf-dimensions__devices -->
