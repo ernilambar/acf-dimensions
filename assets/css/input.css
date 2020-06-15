@@ -75,6 +75,10 @@
 	flex-direction: column;
 }
 
+.acf-dimensions__input .input-label {
+	font-size: .9em;
+}
+
 .acf-dimensions__unit {
 	min-width: 50px;
 }
@@ -109,6 +113,9 @@
 	border-radius: 0;
 }
 
+.edit-post-sidebar .acf-dimensions__input .input-label {
+	font-size: .8em;
+}
 /** Editor **/
 .block-editor__typewriter .acf-dimensions input,
 .block-editor__typewriter .acf-dimensions select {
