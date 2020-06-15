@@ -3,7 +3,7 @@
  * Plugin Name: ACF Dimensions
  * Plugin URI: https://github.com/ernilambar/acf-dimensions
  * Description: ACF dimensions field.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Nilambar Sharma
  * Author URI: https://www.nilambar.net/
  * Text Domain: acf-dimensions
