@@ -43,7 +43,7 @@ gulp.task( 'watch', function() {
 // Make pot file.
 gulp.task('pot', function() {
 	const { run } = gulpPlugins;
-	return run('wpi18n makepot --domain-path=languages --exclude=vendors,deploy').exec();
+	return run('wpi18n makepot --domain-path=languages --exclude=vendor,deploy').exec();
 })
 
 // Add text domain.
