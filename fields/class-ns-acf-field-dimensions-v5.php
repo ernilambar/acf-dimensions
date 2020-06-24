@@ -289,8 +289,8 @@ if ( ! class_exists( 'NS_ACF_Field_Dimensions' ) ) :
 				$left   = isset( $value[ $item ]['left'] ) ? $value[ $item ]['left'] : '';
 				$unit   = isset( $value[ $item ]['unit'] ) ? $value[ $item ]['unit'] : '';
 
-				if ( $top && $right && $bottom && $left ) {
-					$css .= sprintf( '%2$s%1$s %3$s%1$s %4$s%1$s %5$s%1$s', $unit, $top, $right, $bottom, $left );
+				if ( '' !== $top || '' !== $right || '' !== $bottom || '' !== $left ) {
+					$css .= sprintf( '%2$s%1$s %3$s%1$s %4$s%1$s %5$s%1$s', $unit, (float) $top, (float) $right, (float) $bottom, (float) $left );
 				}
 
 				$output[ $item ] = $css;

@@ -3,7 +3,7 @@
  * Plugin Name: ACF Dimensions
  * Plugin URI: https://github.com/ernilambar/acf-dimensions
  * Description: ACF dimensions field.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Nilambar Sharma
  * Author URI: https://www.nilambar.net/
  * Text Domain: acf-dimensions
@@ -49,7 +49,7 @@ if ( ! class_exists( 'NS_ACF_Plugin_Dimensions' ) ) :
 		 */
 		public function __construct() {
 			$this->settings = array(
-				'version' => '1.0.1',
+				'version' => '1.0.2',
 				'url'     => plugin_dir_url( __FILE__ ),
 				'path'    => plugin_dir_path( __FILE__ ),
 			);
