@@ -1,23 +1,25 @@
 {
   "name": "acf-dimensions",
   "title": "ACF Dimensions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "GPL-2.0+",
   "main_file": "acf-dimensions.php",
   "scripts": {
-    "start": "gulp",
+    "dev": "gulp",
     "build": "gulp build",
-    "deploy": "gulp deploy"
+    "cb": "gulp clean:deploy",
+    "deploy": "gulp deploy",
+    "pot": "npm run textdomain && npm run language",
+    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules,freemius",
+    "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules,freemius"
   },
   "repository": "github:ernilambar/acf-dimensions",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
+    "del": "^6.0.0",
+    "dotenv": "^16.0.0",
     "gulp": "^4.0.2",
-    "gulp-load-plugins": "^1.6.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-run": "^1.7.1",
-    "gulp-zip": "^5.0.1",
-    "node-wp-i18n": "^1.2.3"
+    "node-wp-i18n": "^1.2.6"
   }
 }

@@ -7,14 +7,13 @@ project.properties
 .settings*
 .idea
 
-# Grunt
+# Node
 /node_modules/
-/vendor/
 /deploy/
 /build/
 
-# Docs
-/docs/
+# Environment
+.env
 
 # Sass
 .sass-cache/
@@ -24,3 +23,6 @@ project.properties
 
 # Windows junk
 Thumbs.db
+
+# Map file
+*.map
