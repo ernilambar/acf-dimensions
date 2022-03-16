@@ -4,9 +4,9 @@
 **Donate link:** https://github.com/ernilambar/acf-dimensions  
 **Tags:** acf, dimension, field,  
 **Requires at least:** 5.0  
-**Requires PHP:** 5.6.20  
-**Tested up to:** 5.4  
-**Stable tag:** 1.0.2  
+**Requires PHP:** 5.6  
+**Tested up to:** 5.9  
+**Stable tag:** 1.0.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -44,6 +44,10 @@ Nice, make a post on the [Plugin Repo](https://github.com/ernilambar/acf-dimensi
 1. Dimensions field
 
 ## Changelog 
+
+### 1.0.3 - 16 Mar 2022 
+
+* Minor bug fixes
 
 ### 1.0.2 - 24 Jun 2020 
 
