@@ -236,8 +236,8 @@ if ( ! class_exists( 'NS_ACF_Field_Dimensions' ) ) :
 
 			$version = $this->settings['version'];
 
-			wp_enqueue_script( 'acf-dimensions', "{$url}assets/js/input.js", array( 'acf-input' ), $version );
-			wp_enqueue_style( 'acf-dimensions', "{$url}assets/css/input.css", array( 'acf-input' ), $version );
+			wp_enqueue_script( 'acf-dimensions', "{$url}assets/input.js", array( 'acf-input' ), $version );
+			wp_enqueue_style( 'acf-dimensions', "{$url}assets/input.css", array( 'acf-input' ), $version );
 		}
 
 		/**

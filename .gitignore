@@ -1,28 +1,53 @@
-# Editors
+# Operating System files
+*~
+._*
+.DS_Store
+Thumbs.db
+Desktop.ini
+.Spotlight-V100
+.Trashes
+
+# IDE files
+.idea
+.vscode/*
 project.xml
 project.properties
-/nbproject/private/
-.buildpath
 .project
 .settings*
-.idea
+*.sublime-project
+*.sublime-workspace
+.sublimelinterrc
+nbproject/private/
+tmp/
 
-# Node
-/node_modules/
-/deploy/
-/build/
-
-# Environment
+# Environment files
 .env
+
+wp-cli.local.yml
+yarn-error.log
+npm-debug.log
+.pnpm-debug.log
+
+# Ignored extensions
+*~
+*.diff
+*.err
+*.log
+*.map
+*.orig
+*.pyc
+*.rej
+*.sass-cache
+*.sw?
+*.vi
+*.zip
 
 # Sass
 .sass-cache/
 
-# OS X metadata
-.DS_Store
-
-# Windows junk
-Thumbs.db
-
-# Map file
-*.map
+# Project folders
+docs/
+build/
+deploy/
+vendor/
+node_modules/
